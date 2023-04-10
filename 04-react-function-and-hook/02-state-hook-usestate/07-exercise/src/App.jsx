@@ -2,37 +2,42 @@ import React, { useState } from 'react';
 
 function App() {
     // adding state here.
+    // [stateVariable, stateMethod] = useState(init)
+    const [choices, setChoices] = useState()
 
-  const handleClick = (value) => {
+  const handleClickFullname = () => {
     // code here.
+    setChoices('Fullname')
   };
 
   return (
     <div>
-      <button>Fullname</button>
-      <button>Age</button>
-      <button>Picture</button>
+      <button onClick={handleClickFullname}>Fullname</button>
+      <button onClick={() => setChoicesn('Age')}>Age</button>
+      <button onClick={() => setChoices('Pictures')}>Picture</button>
       <DisplayInfo />
     </div>
+image.png
+    
   );
 }
 
 function DisplayInfo(props) {
 
-  let ___;
-  if (___ === 'Fullname') {
-    ___ = <h2>John Doe</h2>;
-  } else if (___ === 'Age') {
-    ___ = <h2>30</h2>;
-  } else if (___ === 'Picture') {
-    ___ = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
+  let showChoices;
+  if (choices === 'Fullname') {
+    showChoices = <h2>John Doe</h2>;
+  } else if (choices === 'Age') {
+    showChoices = <h2>30</h2>;
+  } else if (choices === 'Picture') {
+    showChoices = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
   } else {
-    ___ = <p>Please select an option.</p>;
+    showChoices = <p>Please select an option.</p>;
   }
 
   return (
     <div>
-      {___}
+      { showChoices }
     </div>
   );
 }

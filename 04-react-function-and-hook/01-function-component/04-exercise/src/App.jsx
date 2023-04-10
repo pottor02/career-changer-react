@@ -34,12 +34,26 @@ const Result = () => {
     return (
         <div>
             <table >
-                <tr>ROW
-                    <td>DATA</td>
-                    <td>DATA</td>
-                    <td>DATA</td>
-                    <td>DATA</td>
-                    <td>DATA</td>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Organization</b></td>
+                    <td><b>Position</b></td>
+
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>ABC Inc.</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>ABC Inc.</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>ABC Inc.</td>
+                    <td>Developer</td>
                 </tr>
             </table>
 
