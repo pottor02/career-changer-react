@@ -1,18 +1,15 @@
 import Layout from './Layout'
-import Nav from './Nav'
 
-
-const App = () => {
+const Login = () => {
     
     return (
         <Layout>
-            <Nav />
             <div>
-                Application
+                Login
             </div>
         </Layout>
     )
 }
 
-export default App
+export default Login
 
