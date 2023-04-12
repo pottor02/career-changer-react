@@ -16,8 +16,9 @@ const App = () => {
   return (
     <div>
       <h1>Current Rate: {rate}</h1>
-      <button onClick={syncRate}>Sync Rate</button>
       <input type="number" value={exchange} onChange={handleExchangeChange} />
+      <button onClick={syncRate}>Sync Rate</button>
+
       <h2>Calculated Exchange: {exchange * rate}</h2>
     </div>
   );

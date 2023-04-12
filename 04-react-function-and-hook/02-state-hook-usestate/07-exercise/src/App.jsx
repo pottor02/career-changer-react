@@ -5,31 +5,29 @@ function App() {
     // [stateVariable, stateMethod] = useState(init)
     const [choices, setChoices] = useState()
 
-  const handleClickFullname = () => {
+  const handleClick = (value) => {
     // code here.
-    setChoices('Fullname')
+    setChoices(value)
   };
 
   return (
     <div>
-      <button onClick={handleClickFullname}>Fullname</button>
-      <button onClick={() => setChoicesn('Age')}>Age</button>
-      <button onClick={() => setChoices('Pictures')}>Picture</button>
-      <DisplayInfo />
+      <button onClick={() => setChoices('Fullname')}>Fullname</button>
+      <button onClick={() => setChoices('Age')}>Age</button>
+      <button onClick={() => setChoices('Picture')}>Picture</button>
+      <DisplayInfo choices={choices}/>
     </div>
-image.png
-    
   );
 }
 
 function DisplayInfo(props) {
 
   let showChoices;
-  if (choices === 'Fullname') {
+  if (props.choices === 'Fullname') {
     showChoices = <h2>John Doe</h2>;
-  } else if (choices === 'Age') {
+  } else if (props.choices === 'Age') {
     showChoices = <h2>30</h2>;
-  } else if (choices === 'Picture') {
+  } else if (props.choices === 'Picture') {
     showChoices = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
   } else {
     showChoices = <p>Please select an option.</p>;
