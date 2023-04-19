@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const App = () => {
+const JSXLoop = () => {
     const employee1 = {
         name: "John",
         organization: "ABC Inc.",
@@ -29,6 +29,7 @@ const App = () => {
     //     console.log(`at index ${index} value is : `, employees[index])
     // }
 
+
     const showEmployee = (iter) => {
         return (
             <tr>
@@ -39,7 +40,15 @@ const App = () => {
         )
     }
     
-    employees.map(showEmployee)
+    employees.map((iter) => {
+        return (
+            <tr>
+                <td>{iter.name}</td>
+                <td>{iter.organization}</td>
+                <td>{iter.position}</td>
+            </tr>
+        )
+    })
 
     
     
@@ -69,4 +78,4 @@ const App = () => {
     )
 }
 
-export default App
+export default JSXLoop
