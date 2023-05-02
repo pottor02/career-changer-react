@@ -9,7 +9,8 @@ function BasicApp() {
   const getCompanies = async () => {
     // 1) create HttpRequest by axios
     // axios.get(hostname+route)
-    const response = axios.get("http://127.0.0.1:3001/company");
+    const response = await axios.get("http://127.0.0.1:3001/company");
+    setCompanies(response.data);
     console.log(response);
     // 2) use async await in axios
     // 3) set Response to companies by useState (setCompanies)
@@ -17,11 +18,14 @@ function BasicApp() {
 
   const createCompany = async () => {
     // 0) get name, taxId
+    const newCompany = { name, taxId };
     // 1) create HttpRequest by axios
+    const response = axios.post("http://127.0.0.1:3001/company", newCompany);
     // axios.get(hostname+route, body)
     // body should be dynamic by state
     // 2) use async await in axios
     // 3) alert `Successful create user`
+    alert("Successful create user")
   };
 
   return (
