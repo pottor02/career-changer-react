@@ -20,11 +20,12 @@ webServer.get("/company", (request, response) => {
 });
 
 webServer.post("/company", (request, response) => {
+  const companyId = `com${company.length + 1}`;
   const name = request.body.name;
   // const taxId = request.body.taxId;
   const taxId = `tax${company.length + 1}`;
-  const companyId = `com${company.length + 1}`;
-  company.push({ companyId, name, taxId });
+  const employees = []
+  company.push({ companyId, name, taxId, employees });
   response.send("Create User Success. This Company Route.");
 });
 
