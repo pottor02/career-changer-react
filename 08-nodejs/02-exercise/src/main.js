@@ -1,7 +1,8 @@
 import express, { request, response } from "express";
 const webServer = express();
-const port = 3001;
 const ipAddress = "127.0.0.2";
+const port = 3001;
+
 
 // code down below
 
